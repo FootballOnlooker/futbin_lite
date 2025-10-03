@@ -9,7 +9,9 @@
     <ul>
         {% for player in players %}
         <li>
+            <a href="{% url 'cards:player_detail' player.pk %}">
             {{ player.name }} ({{ player.position }}) - Rating: {{ player.rating }}
+            </a>
         </li>
         {% endfor %}
     </ul>

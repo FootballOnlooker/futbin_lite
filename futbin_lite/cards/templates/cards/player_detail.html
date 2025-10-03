@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ player.name }}</title>
+</head>
+<body>
+    <h1>{{ player.name }}</h1>
+    <p>Position: {{ player.position }}</p>
+    <p>Club: {{ player.club }}</p>
+    <p>Nation: {{ player.nation }}</p>
+    <p>Rating: {{ player.rating }}</p>
+
+    <a href="{% url 'cards:player_list' %}">Back to list</a>
+
+</body>
+</html>

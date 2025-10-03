@@ -1,17 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>{{ player.name }}</title>
-</head>
-<body>
-    <h1>{{ player.name }}</h1>
-    <p>Position: {{ player.position }}</p>
-    <p>Club: {{ player.club }}</p>
-    <p>Nation: {{ player.nation }}</p>
-    <p>Rating: {{ player.rating }}</p>
+{% extends "base.html" %}
 
-    <a href="{% url 'cards:player_list' %}">Back to list</a>
+{% block title %}{{ player.name }}{% endblock %}
 
-</body>
-</html>
+{% block content %}
+<h2>{{ player.name }}</h2>
+<p>Rating: {{ player.rating }}</p>
+<p>Position: {{ player.position }}</p>
+<p>Club: {{ player.club }}</p>
+<p>Nation: {{ player.nation }}</p>
+<a href="{% url 'cards:player_list' %}">Back to list</a>
+{% endblock %}
+

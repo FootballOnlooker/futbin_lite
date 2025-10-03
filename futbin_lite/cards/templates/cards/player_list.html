@@ -1,20 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Player Cards</title>
-</head>
-<body>
-    <h1>Player Cards</h1>
-    <ul>
-        {% for player in players %}
-        <li>
-            <a href="{% url 'cards:player_detail' player.pk %}">
-            {{ player.name }} ({{ player.position }}) - Rating: {{ player.rating }}
-            </a>
-        </li>
-        {% endfor %}
-    </ul>
+{% extends "base.html" %}
 
-</body>
-</html>
+{% block title %}Players{% endblock %}
+
+{% block content %}
+<h2>List of Players</h2>
+<ul>
+    {% for player in players %}
+    <li>
+        <a href="{% url 'cards:player_detail' player.pk %}">
+            {{ player.name }}{{ player.rating }}
+        </a>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}

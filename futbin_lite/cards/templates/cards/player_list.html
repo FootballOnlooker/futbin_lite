@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Player Cards</title>
+</head>
+<body>
+    <h1>Player Cards</h1>
+    <ul>
+        {% for player in players %}
+        <li>
+            {{ player.name }} ({{ player.position }}) - Rating: {{ player.rating }}
+        </li>
+        {% endfor %}
+    </ul>
+
+</body>
+</html>
